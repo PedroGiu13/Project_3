@@ -1,0 +1,48 @@
+.home{
+    min-height: 100vh;
+    display: flex;
+    align-items:center;
+    background: url(../assets/home.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.home-content{
+    color: var(--white);
+    width: 50%;
+    padding-right: 7rem;
+    padding-bottom: 20rem;
+    padding-left: 5rem;
+    background-color: none;
+}
+
+.home-content h1{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 5rem;
+    padding-bottom: 2rem;
+    font-style: italic;
+}
+
+.home-content p{
+    font-size: 3rem;
+    font-family: 'Lato', sans-serif;
+    padding-bottom: 3rem;
+    text-align: left;
+}
+
+.home-content a{
+    color: var(--white);
+    font-family: 'Lato', sans-serif ;
+    font-size: 2rem;
+    border:  0.1rem solid var(--gold);
+    border-radius: 3rem;
+    padding: 1rem;
+    text-decoration: none;
+    -webkit-transition: ease-out 0.5s;
+    -moz-transition: ease-out 0.5s;
+    transition: ease-out 0.5s;
+}
+
+.home-content a:hover{
+    box-shadow: inset 100px 50px 0 0 #D5A839;
+}

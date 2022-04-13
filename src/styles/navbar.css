@@ -1,0 +1,41 @@
+.navbar {
+  background-color: var(--black);
+  padding: 3rem;
+  border-bottom: 0.2rem solid var(--gold);
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  align-items: center;
+}
+
+.nav-links {
+  font-size: 3rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+.nav-links a {
+  color: var(--white);
+  display: inline;
+  margin: 0 1rem;
+  padding: 0 .5rem;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  color: var(--gold);
+  border-bottom: 0.1rem solid var(--gold);
+}
+
+
+.nav-icon svg{
+  cursor: pointer;
+  font-size: 2.5rem;
+  color: var(--white);
+}
+
+.nav-icon svg:hover{
+  color: var(--gold);
+}

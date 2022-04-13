@@ -1,0 +1,51 @@
+.body-loader{
+    display: flex;
+    flex-flow: column wrap;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--black);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.body-loader .txt{
+    color: var(--white);
+    margin-bottom: 3rem;
+    font-size: 5rem;
+    text-align: center;
+}
+
+.body-loader .txt h1{
+    margin-bottom: 2rem;
+}
+
+.body-loader .txt span{
+    color: var(--gold);
+    margin: 0 1rem 0 1rem;
+}
+
+.loader-box{ 
+    position: relative;
+    width: 400px;
+    height: 50px;
+    border-radius: 50px;
+    border: 2px solid var(--gold);
+    overflow: hidden;
+}
+
+.load-animation{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 50px;
+    background: linear-gradient(45deg, #D5A839,#C49D47, #886b38);
+    left: 100%;
+    animation: load 3s linear infinite;
+}
+
+@keyframes load{
+    0%{left: -100%};
+    100%{left: 100%};
+
+}

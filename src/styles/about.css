@@ -1,0 +1,47 @@
+.about-box{
+    padding: 7rem 2rem 2rem 2rem;
+    background-color:var(--black);
+    font-family: 'Lato', sans-serif;
+}
+
+.about-item {
+    display: flex;
+    align-items: center;
+    color: var(--white);
+    border-bottom: 0.1rem groove #d5a939a9;
+    padding: 2.5rem 1rem ;
+    margin: 2rem 0;
+}
+
+.last{
+    border: none;
+}
+
+.about-item__info{
+    width: 70%;
+    padding: 2rem;
+}
+
+
+.about-item__info h1{
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.about-item__info p{
+    font-size: 1.5rem;
+    text-align: justify;
+
+}
+
+.about-item__img{
+    width: auto;
+    padding: 2rem;
+}
+
+.about-item__img img{
+    height: 25rem;
+    width: 100%;
+    aspect-ratio: 3 / 2;
+}

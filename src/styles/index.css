@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;1,700&family=Montserrat&display=swap');
+
+/* font-family: 'Lato', sans-serif;
+font-family: 'Montserrat', sans-serif; */
+
+:root{
+    --gold: rgb(218,165,32);
+    --black: rgb(26, 25, 25);
+    --white: rgb(248,248,255);
+  }
+
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+
+html::-webkit-scrollbar{
+  width: 1rem;
+}
+
+html::-webkit-scrollbar-track{
+  background: var(--black);
+}
+
+html::-webkit-scrollbar-thumb{
+  background: var(--white);
+  border-radius: 5rem;
+}
+
+
