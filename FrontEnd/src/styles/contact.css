@@ -17,6 +17,12 @@ span {
   color: var(--gold);
 }
 
+.contact-message{
+  color:  var(--white);
+  font-size: 5rem;
+  text-align: center;
+}
+
 .box-container {
   display: flex;
   align-items: center;

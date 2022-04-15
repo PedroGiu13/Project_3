@@ -16,7 +16,7 @@ const Review = () => {
       image: quote,
     };
 
-    fetch("http://localhost:4000/clientList", {
+    fetch("http://localhost:4000/review", {
       method: "POST",
       headers: {
         Accept: "application/json",
@@ -27,50 +27,31 @@ const Review = () => {
       .then((data) => data.json())
       .then((data) => {
         setClients(clients.concat(data));
-      });
+      })
+      .catch((e) => {
+        console.log("Hubo un error");
+        setIsError(true);
+      })
+      .finally(() =>{
+          setIsLoading(false)
+      })
   };
 
   
   useEffect(() => {
-    fetch("http://localhost:4000/clientList")
-    .then((data) => {
-      if (!data.ok) {
-        throw Error("Error: No se pudieron obtener datos para ese recurso");
-      }
-      return data.json();
-    })
+    fetch("http://localhost:4000/review")
+    .then((data) => data.json())
     .then((data) => {
       setClients(data);
       setIsLoading(false);
       setIsError(null);
     })
-    .catch((err) => {
-      setIsError(err.message);
+    .catch((e) => {
+      console.log("Hubo un error");
+      setIsError(true);
       setIsLoading(false);
     });
   }, []);
-  
-  // Funcion para probar el mensaje de carga
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     fetch("http://localhost:4000/clientList")
-  //       .then((data) => {
-  //         if(!data.ok) {
-  //           throw Error("Error: No se pudieron obtener datos para ese recurso")
-  //         }
-  //         return data.json();
-  //       })
-  //       .then((data) => {
-  //         setClients(data);
-  //         setIsLoading(false);
-  //         setIsError(null);
-  //       })
-  //       .catch((err) => {
-  //         setIsError(err.message);
-  //         setIsLoading(false);
-  //       });
-  //   }, 1000);
-  // }, []);
   
   return (
     <div className="review-section">
@@ -78,7 +59,7 @@ const Review = () => {
         Lo que dicen <span>nuestros clientes</span>
       </h1>
       <div>
-        {isError && <div className="error"> {isError}</div>}
+        {isError && <div className="error"> Ha ocurrido un error </div>}
         {isLoading && <div className="loader">Cargando...</div>}
         {clients && <ClientItemList clientList={clients} />}
       </div>

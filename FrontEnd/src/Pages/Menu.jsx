@@ -12,39 +12,31 @@ const Menu = () => {
   const [isError_2, setIsError_2] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:4000/menuList")
-      .then((data) => {
-        if (!data.ok) {
-          throw Error("Error: No se pudieron obtener datos para ese recurso");
-        }
-        return data.json();
-      })
+    fetch("http://localhost:5000/menuList")
+      .then((data) => data.json())
       .then((data) => {
         setMenuList(data);
         setIsLoading_1(false);
         setIsError_1(null);
       })
-      .catch((err) => {
-        setIsError_1(err.message);
+      .catch((e) => {
+        console.log("Hubo un error");
+        setIsError_1(true);
         setIsLoading_1(false);
       });
   }, []);
 
   useEffect(() => {
-    fetch("http://localhost:4000/productList")
-      .then((data) => {
-        if (!data.ok) {
-          throw Error("Error: No se pudieron obtener datos para ese recurso");
-        }
-        return data.json();
-      })
+    fetch("http://localhost:5000/productList")
+      .then((data) =>data.json())
       .then((data) => {
         setProductLsit(data);
         setIsLoading_2(false);
         setIsError_2(null);
       })
-      .catch((err) => {
-        setIsError_2(err.message);
+      .catch((e) => {
+        console.log("Hubo un error");
+        setIsError_2(true);
         setIsLoading_2(false);
       });
   }, []);
@@ -55,7 +47,7 @@ const Menu = () => {
         Nuestro <span>Menu</span>
       </h1>
       <div className="error-box box1">
-        {isError_1 && <div className="error"> {isError_1}</div>}
+        {isError_1 && <div className="error"> Error: No se encuentra el recurso que esta buscando</div>}
         {isLoading_1 && <div className="loader">Cargando...</div>}
       </div>
       <div>{menuList && <MenuItemList menuList={menuList} />}</div>
@@ -63,7 +55,7 @@ const Menu = () => {
         <span className="product-span">Nuestros</span> Cafes
       </h1>
       <div className="error-box">
-        {isError_2 && <div className="error"> {isError_2}</div>}
+        {isError_2 && <div className="error"> Error: No se encuentra el recurso que esta buscando </div>}
         {isLoading_2 && <div className="loader">Cargando...</div>}
       </div>
       <div>{productList && <ProductItemList productList={productList} />}</div>

@@ -5,10 +5,11 @@ import NewContact from "../components/NewContact";
 
 const Contact = () => {
   const [contactList, setContactList] = useState ([]);
+  const [message, setMessage] = useState('')
 
   const saveContactInfo = (enteredContact) => {
     const contactName = enteredContact.name
-    alert(`Gracias por contactarnos ${contactName}!`);
+    setMessage(`Gracias por contactarnos ${contactName}. Te responderemos a la brevedad!`)
 
     fetch("http://localhost:4000/contactList", {
       method: "POST",
@@ -31,6 +32,9 @@ const Contact = () => {
         <h1>
           <span>Ponte en contacto</span> con nosotros
         </h1>
+      </div>
+      <div className="contact-message">
+        {message}
       </div>
       <div className="box-container">
         <div className="box-item item-1">
