@@ -12,7 +12,7 @@ const Review = () => {
   const saveNewReview = (enteredReview) => {
     const newReviewObj = {
       ...enteredReview,
-      id: Math.floor(Math.random() * 100).toString(),
+      id: Math.floor(Math.random() * 100),
       image: quote,
     };
 

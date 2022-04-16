@@ -1,7 +1,7 @@
 import React from "react";
 import MenuItem from "../components/MenuItem";
 
-const MenuItemList = (props) => {
+const MenuItemList = ({props}) => {
   return (
     <div className="item-list menu-list">
       {props.menuList.map((item) => (

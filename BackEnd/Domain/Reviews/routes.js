@@ -1,11 +1,20 @@
 const express = require("express");
 const router = express.Router();
-const clientList = require('./review-db');
+
+let reviewList = require("./review-db");
 
 const getClientList = (req, res) => {
-    res.send(clientList)
-}
+  res.send(reviewList);
+};
 
-router.get('/', getClientList)
+const addClientList = (req, res) => {
+  let newReview = req.body;
+  reviewList.push(newReview);
+  res.send(reviewList);
+  console.log(reviewList)
+};
 
-module.exports = router
+router.get("/", getClientList);
+router.post("/", addClientList);
+
+module.exports = router;

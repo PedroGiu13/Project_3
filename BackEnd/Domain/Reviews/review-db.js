@@ -1,4 +1,4 @@
-let clientList = [
+let reviewList = [
   {
     id: 1,
     image:
@@ -28,4 +28,4 @@ let clientList = [
   },
 ];
 
-module.exports = clientList;
+module.exports = reviewList;

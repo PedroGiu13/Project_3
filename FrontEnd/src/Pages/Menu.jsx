@@ -12,7 +12,7 @@ const Menu = () => {
   const [isError_2, setIsError_2] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:5000/menuList")
+    fetch("http://localhost:4000/menu")
       .then((data) => data.json())
       .then((data) => {
         setMenuList(data);
