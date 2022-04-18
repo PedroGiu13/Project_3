@@ -5,9 +5,9 @@ import ClientItemList from "../components/ClientItemList";
 import NewReview from "../components/NewReview";
 
 const Review = () => {
-  const [clients, setClients] = useState(null);
+  const [clients, setClients] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-  const [isError, setIsError] = useState(null);
+  const [isError, setIsError] = useState(false);
 
   const saveNewReview = (enteredReview) => {
     const newReviewObj = {
@@ -44,7 +44,6 @@ const Review = () => {
     .then((data) => {
       setClients(data);
       setIsLoading(false);
-      setIsError(null);
     })
     .catch((e) => {
       console.log("Hubo un error");
