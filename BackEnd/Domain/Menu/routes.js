@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
-let menuList = require("../Products/menuList-db");
+let menuList = require("./menuList-db");
 
 const getMenuList = (req, res) => {
   res.send(menuList);
