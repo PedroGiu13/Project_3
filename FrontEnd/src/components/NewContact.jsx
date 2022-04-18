@@ -43,6 +43,7 @@ const NewContact = (props) => {
     props.onContactSubmit(contactInfo);
 
     setContactName("");
+    setContactLastName('');
     setContactMail("");
     setContactPhone("");
     setContactMessage("");

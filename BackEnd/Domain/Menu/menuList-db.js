@@ -29,4 +29,12 @@ let menuList = [
     title: "Flat White",
     price: 115,
   },
+  {
+    id: "6",
+    image: "db_assets/menu-6.png",
+    title: "Cold Latte",
+    price: 140,
+  },
 ];
+
+module.exports = menuList;

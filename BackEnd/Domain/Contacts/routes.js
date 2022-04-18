@@ -7,9 +7,7 @@ const addContactList = (req, res) => {
     let newContact = req.body;
 
     contactList.push(newContact);
-    res.send(contactList);
-
-    console.log(contactList);
+    res.send(newContact);
 };
 
 router.post('/', addContactList);

@@ -10,8 +10,7 @@ const getClientList = (req, res) => {
 const addClientList = (req, res) => {
   let newReview = req.body;
   reviewList.push(newReview);
-  res.send(reviewList);
-  console.log(reviewList)
+  res.send(newReview);
 };
 
 router.get("/", getClientList);

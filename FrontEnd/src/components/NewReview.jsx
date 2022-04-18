@@ -36,6 +36,7 @@ const NewReview = (props) => {
     props.onReviewSubmit(newEnteredReview);
 
     setEnteredName("");
+    setEnteredLastName('');
     setEnteredRating("");
     setEnteredComment("");
   };
