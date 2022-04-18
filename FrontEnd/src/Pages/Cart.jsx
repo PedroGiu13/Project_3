@@ -2,6 +2,7 @@ import React from "react";
 import "../styles/cart.css";
 
 const Cart = () => {
+
   return (
     <div className="body-loader">
       <div className="txt">

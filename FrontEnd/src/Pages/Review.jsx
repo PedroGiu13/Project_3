@@ -57,11 +57,13 @@ const Review = () => {
       <h1>
         Lo que dicen <span>nuestros clientes</span>
       </h1>
+
       <div>
         {isError && <div className="error"> Ha ocurrido un error </div>}
         {isLoading && <div className="loader">Cargando...</div>}
-        {clients && <ClientItemList clientList={clients} />}
+        <ClientItemList clientList={clients} />
       </div>
+      
       <div>
         <NewReview onReviewSubmit={saveNewReview} />
       </div>

@@ -6,7 +6,7 @@ const ClientItem = (props) => {
     <div className="review-box-container">
       <div className="review-box-content">
         <img src={props.img} alt="quote" />
-        <h2>{props.name}</h2>
+        <h2>{props.name} {props.lastName}</h2>
         <h3>{props.rating}</h3>
         <p>{props.comment}</p>
       </div>

@@ -1,10 +1,10 @@
-import React from "react";
 import "../styles/menu.css";
 
 const MenuItem = (props) => {
   const alertMessage = () =>{
-    alert("Por el momento no se pueden hacer compras")
+    alert('No se pueden realizar compras')
   }
+
 
   return (
     <div className="menu-item">

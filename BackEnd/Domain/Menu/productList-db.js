@@ -21,3 +21,5 @@ let productList = [
     btn: "Comprar",
   },
 ];
+
+module.exports = productList;

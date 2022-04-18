@@ -3,12 +3,17 @@ import "../styles/contact.css";
 
 const NewContact = (props) => {
     const [contactName, setContactName] = useState("");
+    const [contactLastName, setContactLastName] = useState('')
     const [contactMail, setContactMail] = useState("");
     const [contactPhone, setContactPhone] = useState("");
     const [contactMessage, setContactMessage] = useState("");
 
     const nameHandler = (e) => {
         setContactName(e.target.value)
+    }
+
+    const lastNameHandler =(e) => {
+        setContactLastName(e.target.value)
     }
 
     const mailHandler = (e) => {
@@ -29,6 +34,7 @@ const NewContact = (props) => {
 
     const contactInfo = {
         name: contactName,
+        lastName: contactLastName,
         mail: contactMail,
         phone: contactPhone,
         message: contactMessage
@@ -48,10 +54,18 @@ const NewContact = (props) => {
         <input
           className="input-box"
           type="text"
-          placeholder="Nombre y Apellido"
+          placeholder="Nombre"
           required="required"
           value={contactName}
           onChange={nameHandler}
+        />
+        <input
+          className="input-box"
+          type="text"
+          placeholder="Apellido"
+          required="required"
+          value={contactLastName}
+          onChange={lastNameHandler}
         />
         <input
           className="input-box"

@@ -24,6 +24,9 @@ const Contact = () => {
         setContactList(contactList.concat(data));
       });
  
+      setTimeout(() => {
+        setMessage('')
+      },5000)
   }
 
   return (

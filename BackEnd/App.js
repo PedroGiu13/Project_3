@@ -5,6 +5,9 @@ const cors = require("cors");
 const bodyParser = require("body-parser");
 const reviewRoute = require("./Domain/Reviews/routes");
 const menuRoute = require('./Domain/Menu/routes')
+const productRoute = require('./Domain/Products/routes');
+const contactRoute = require('./Domain/Contacts/routes');
+
 
 let app = express();
 app.use(cors());
@@ -15,7 +18,11 @@ app.use(bodyParser.json());
 
 app.use("/review", reviewRoute);
 
-app.use('/menu', menuRoute);
+app.use('/menuList', menuRoute);
+
+app.use('/productList', productRoute)
+
+app.use('/contactList', contactRoute )
 
 
 app.get("/*", (req, res) => {
@@ -24,5 +31,5 @@ app.get("/*", (req, res) => {
 });
 
 app.listen(4000, () => {
-  console.log("App cooriendo en el puerto 4000");
+  console.log("Running on port 4000");
 });

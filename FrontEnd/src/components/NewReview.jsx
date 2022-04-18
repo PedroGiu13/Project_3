@@ -3,12 +3,17 @@ import "../styles/review.css";
 
 const NewReview = (props) => {
   const [enteredName, setEnteredName] = useState("");
+  const [enteredLastName, setEnteredLastName] = useState('')
   const [enteredRating, setEnteredRating] = useState("");
   const [enteredComment, setEnteredComment] = useState("");
 
   const nameChangeHandler = (e) => {
     setEnteredName(e.target.value);
   };
+
+  const lastNameHandler = (e) => {
+    setEnteredLastName(e.target.value)
+  }
 
   const ratingChangeHandler = (e) => {
     setEnteredRating(e.target.value);
@@ -23,6 +28,7 @@ const NewReview = (props) => {
 
     const newEnteredReview = {
       name: enteredName,
+      lastName: enteredLastName,
       rating: enteredRating,
       comment: enteredComment,
     };
@@ -43,10 +49,18 @@ const NewReview = (props) => {
         <input
           className="input-container"
           type="text"
-          placeholder="Nombre y Apellido"
+          placeholder="Nombre"
           required="required"
           value={enteredName}
           onChange={nameChangeHandler}
+        />
+        <input
+          className="input-container"
+          type="text"
+          placeholder="Apellido"
+          required="required"
+          value={enteredLastName}
+          onChange={lastNameHandler}
         />
         <select
           className="input-container"
