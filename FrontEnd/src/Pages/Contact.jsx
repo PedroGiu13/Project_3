@@ -26,7 +26,7 @@ const Contact = () => {
  
       setTimeout(() => {
         setMessage('')
-      },5000)
+      },7000)
   }
 
   return (

@@ -34,12 +34,9 @@ app.get("/*", (req, res) => {
   res.send(`No existe el recurso`);
 });
 
-app.listen(4000, () => {
-  console.log("Correindo en 4000")
-})
 
-// app.listen(4000, async () => {
-//   await sequelize.sync({force:true})
-//   // execute();
-//   console.log('Server running on port 4000')
-// });
+app.listen(4000, async () => {
+  await sequelize.sync({force:true})
+  execute();
+  console.log('Server running on port 4000')
+});

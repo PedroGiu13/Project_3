@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import quote from "../assets/quote-img.png";
 import "../styles/review.css";
 import ClientItemList from "../components/ClientItemList";
 import NewReview from "../components/NewReview";
@@ -12,7 +11,6 @@ const Review = () => {
   const saveNewReview = (enteredReview) => {
     const newReviewObj = {
       ...enteredReview,
-      image: quote,
     };
 
     fetch("http://localhost:4000/review", {

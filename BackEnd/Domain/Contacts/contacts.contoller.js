@@ -1,10 +1,18 @@
-let contactList = require("./contact-db");
+const Contacts = require('./contacts')
 
-const addContactList = (req, res) => {
-  let newContact = req.body;
+const addContactList = async(req, res) => {
+  const {name, lastName, mail, phone, message} = req.body
 
-  contactList.push(newContact);
-  res.send(newContact);
+  const newMessage = await Contacts.create({
+    first_name: name,
+    last_name: lastName,
+    email: mail,
+    message: message,
+    phone: phone
+  })
+
+  console.log(newMessage);
+  res.send(newMessage);
 };
 
 module.exports = { addContactList };
