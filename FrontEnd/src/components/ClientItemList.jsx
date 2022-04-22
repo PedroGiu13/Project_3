@@ -9,9 +9,9 @@ const ClientItemList = (props) => {
         <ClientItem
           key={item.id}
           img={item.image}
-          name={item.name}
-          lastName={item.lastName}
-          rating={item.rating}
+          name={item.first_name}
+          lastName={item.last_name}
+          rating={item.calification}
           comment={item.comment}
         />
       ))}

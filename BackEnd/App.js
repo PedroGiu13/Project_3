@@ -1,19 +1,25 @@
 console.log("Starting server");
 
+require('dotenv').config();
+
+const sequelize = require('./database/db')
+const execute = require('./database/initialize');
 const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
-const reviewRoute = require("./Domain/Reviews/routes");
-const menuRoute = require("./Domain/Menu/routes");
-const productRoute = require("./Domain/Products/routes");
-const contactRoute = require("./Domain/Contacts/routes");
 
 let app = express();
-app.use(cors());
+
+const reviewRoute = require("./Domain/Reviews/review.routes");
+const menuRoute = require("./Domain/Menu/menu.routes");
+const productRoute = require("./Domain/Products/products.routes");
+const contactRoute = require("./Domain/Contacts/contacs.routes");
 
 //Middleware que convierte a JSON
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+
+app.use(cors());
 
 app.use("/review", reviewRoute);
 
@@ -29,5 +35,11 @@ app.get("/*", (req, res) => {
 });
 
 app.listen(4000, () => {
-  console.log("Running on port 4000");
-});
+  console.log("Correindo en 4000")
+})
+
+// app.listen(4000, async () => {
+//   await sequelize.sync({force:true})
+//   // execute();
+//   console.log('Server running on port 4000')
+// });

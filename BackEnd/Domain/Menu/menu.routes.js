@@ -1,13 +1,6 @@
 const express = require("express");
 const router = express.Router();
-
-let menuList = require("./menuList-db");
-
-const getMenuList = (req, res) => {
-  res.send(menuList);
-};
-
-
+const { getMenuList } = require("./menu.controller");
 
 router.get("/", getMenuList);
 

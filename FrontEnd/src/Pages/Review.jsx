@@ -12,7 +12,6 @@ const Review = () => {
   const saveNewReview = (enteredReview) => {
     const newReviewObj = {
       ...enteredReview,
-      id: Math.floor(Math.random() * 100),
       image: quote,
     };
 
@@ -43,6 +42,7 @@ const Review = () => {
     .then((data) => data.json())
     .then((data) => {
       setClients(data);
+      console.log(data)
       setIsLoading(false);
     })
     .catch((e) => {
