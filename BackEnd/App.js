@@ -3,7 +3,9 @@ console.log("Starting server");
 require('dotenv').config();
 
 const sequelize = require('./database/db')
-const execute = require('./database/initialize');
+const reviewExecute = require('./database/review-initializer');
+const menuExecute = require('./database/menu-initializer');
+const productExecute = require('./database/product-initializer');
 const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
@@ -37,6 +39,8 @@ app.get("/*", (req, res) => {
 
 app.listen(4000, async () => {
   await sequelize.sync({force:true})
-  execute();
+  reviewExecute();
+  menuExecute();
+  productExecute();
   console.log('Server running on port 4000')
 });

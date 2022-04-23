@@ -1,6 +1,8 @@
-let menuList = require("./menuList-db");
+const Menu = require('./menu')
 
-const getMenuList = (req, res) => {
+const getMenuList = async (req, res) => {
+  const menuList = await Menu.findAll();
+  console.log("Aca va el menu", menuList);
   res.send(menuList);
 };
 

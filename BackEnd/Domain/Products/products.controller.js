@@ -1,7 +1,9 @@
-let productList = require('./productList-db');
+const Product = require('./products');
 
-const getProductList = (req, res) => {
-    res.send(productList)
+const getProductList = async (req, res) => {
+   const productList = await Product.findAll();
+   console.log('Aca van los productos', productList);
+   res.send(productList);
   };
 
 module.exports = {getProductList}

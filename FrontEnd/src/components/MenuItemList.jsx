@@ -8,7 +8,7 @@ const MenuItemList = (props) => {
         <MenuItem
           key={item.id}
           img={item.image}
-          title={item.title}
+          title={item.name}
           price={item.price}
         />
       ))}

@@ -11,7 +11,7 @@ const ProductItem = (props) => {
         <img src={props.img} alt="" />
         <h2>{props.title}</h2>
         <h3>${props.price}</h3>
-        <button onClick={alertMessage}>{props.btn}</button>
+        <button onClick={alertMessage}>Comprar</button>
       </div>
     </div>
   );

@@ -1,6 +1,6 @@
 const Reviews = require("../Domain/Reviews/review");
 
-const migrate = () => {
+const reviewMigrate = () => {
   reviewList.forEach((element) => {
     Reviews.create(element);
   });
@@ -34,4 +34,4 @@ let reviewList = [
 ];
 
 
-module.exports = migrate;
+module.exports = reviewMigrate;
