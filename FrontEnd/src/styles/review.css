@@ -89,12 +89,16 @@ p {
   width: 50rem;
   max-width: 100%;
   color: var(--white);
-  opacity: 0.5;
+  /* opacity: 0.5; */
   
 }
 
-::placeholder {
-  color: var(--white);
+.input-container::placeholder {
+  color: gray;
+}
+
+.input-container:invalid{
+  color: gray;
 }
 
 .comment {

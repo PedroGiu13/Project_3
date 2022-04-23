@@ -58,11 +58,11 @@ span {
   width: 50rem;
   max-width: 100%;
   color: var(--white);
-  opacity: 0.5;
 }
 
-::placeholder {
-  color: var(--white);
+.input-box::placeholder {
+  color: gray;
+  opacity: 0.5;
 }
 
 .message {
