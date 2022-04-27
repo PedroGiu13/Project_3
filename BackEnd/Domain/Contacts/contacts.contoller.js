@@ -10,8 +10,6 @@ const addContactList = async(req, res) => {
     message: message,
     phone: phone
   })
-
-  console.log(newMessage);
   res.send(newMessage);
 };
 
