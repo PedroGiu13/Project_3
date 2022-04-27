@@ -3,8 +3,8 @@ import "../styles/menu.css";
 const MenuItem = (props) => {
   const alertMessage = () =>{
     alert('No se pueden realizar compras')
+    console.log(props.img)
   }
-
 
   return (
     <div className="menu-item">

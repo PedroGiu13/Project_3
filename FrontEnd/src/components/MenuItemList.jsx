@@ -11,7 +11,9 @@ const MenuItemList = (props) => {
           title={item.name}
           price={item.price}
         />
-      ))}
+        
+        ))}
+        {console.log(props.image)}
     </div>
   );
 };

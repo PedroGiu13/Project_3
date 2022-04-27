@@ -53,6 +53,7 @@ const Menu = () => {
       </div>
 
       <MenuItemList menuList={menuList} />
+      {console.log(menuList)}
 
       <h1>
         <span className="product-span">Nuestros</span> Cafes

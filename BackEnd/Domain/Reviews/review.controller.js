@@ -17,8 +17,6 @@ const addReviewList = async (req, res) => {
             calification: rating,
             comment: comment
         })
-       
-    console.log(newReview);
     res.send(newReview);
 }
   
