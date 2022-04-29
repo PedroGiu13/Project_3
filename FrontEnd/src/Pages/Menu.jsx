@@ -46,14 +46,11 @@ const Menu = () => {
       </h1>
 
       <div className="error-box box1">
-
         {isError_1 && <div className="error"> Error: No se encuentra el recurso que esta buscando</div>}
         {isLoading_1 && <div className="loader">Cargando...</div>}
-
       </div>
 
       <MenuItemList menuList={menuList} />
-      {console.log(menuList)}
 
       <h1>
         <span className="product-span">Nuestros</span> Cafes
