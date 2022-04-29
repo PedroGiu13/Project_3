@@ -1,11 +1,11 @@
 console.log("Starting server");
 
-require('dotenv').config();
+require("dotenv").config();
 
-const sequelize = require('./database/db')
-const reviewExecute = require('./database/review-initializer');
-const menuExecute = require('./database/menu-initializer');
-const productExecute = require('./database/product-initializer');
+const sequelize = require("./database/db");
+const reviewExecute = require("./database/review-initializer");
+const menuExecute = require("./database/menu-initializer");
+const productExecute = require("./database/product-initializer");
 const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
@@ -36,11 +36,10 @@ app.get("/*", (req, res) => {
   res.send(`No existe el recurso`);
 });
 
-
 app.listen(4000, async () => {
-  await sequelize.sync({force:true})
+  await sequelize.sync({ force: true });
   reviewExecute();
   menuExecute();
   productExecute();
-  console.log('Server running on port 4000')
+  console.log("Server running on port 4000");
 });
