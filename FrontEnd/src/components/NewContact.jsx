@@ -1,49 +1,48 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import "../styles/contact.css";
 
 const NewContact = (props) => {
-    const [contactName, setContactName] = useState("");
-    const [contactLastName, setContactLastName] = useState('')
-    const [contactMail, setContactMail] = useState("");
-    const [contactPhone, setContactPhone] = useState("");
-    const [contactMessage, setContactMessage] = useState("");
+  const [contactName, setContactName] = useState("");
+  const [contactLastName, setContactLastName] = useState("");
+  const [contactMail, setContactMail] = useState("");
+  const [contactPhone, setContactPhone] = useState("");
+  const [contactMessage, setContactMessage] = useState("");
 
-    const nameHandler = (e) => {
-        setContactName(e.target.value)
-    }
+  const nameHandler = (e) => {
+    setContactName(e.target.value);
+  };
 
-    const lastNameHandler =(e) => {
-        setContactLastName(e.target.value)
-    }
+  const lastNameHandler = (e) => {
+    setContactLastName(e.target.value);
+  };
 
-    const mailHandler = (e) => {
-        setContactMail(e.target.value)
-    }
+  const mailHandler = (e) => {
+    setContactMail(e.target.value);
+  };
 
-    const phoneHandler = (e) => {
-        setContactPhone(e.target.value)
-    }
+  const phoneHandler = (e) => {
+    setContactPhone(e.target.value);
+  };
 
-    const messageHadler = (e) => {
-        setContactMessage(e.target.value)
-    }
-
+  const messageHadler = (e) => {
+    setContactMessage(e.target.value);
+  };
 
   const contactSubmitHandler = (e) => {
     e.preventDefault();
 
     const contactInfo = {
-        name: contactName,
-        lastName: contactLastName,
-        mail: contactMail,
-        phone: contactPhone,
-        message: contactMessage
+      name: contactName,
+      lastName: contactLastName,
+      mail: contactMail,
+      phone: contactPhone,
+      message: contactMessage,
     };
 
     props.onContactSubmit(contactInfo);
 
     setContactName("");
-    setContactLastName('');
+    setContactLastName("");
     setContactMail("");
     setContactPhone("");
     setContactMessage("");
