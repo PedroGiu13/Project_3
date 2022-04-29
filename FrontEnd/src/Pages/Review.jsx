@@ -11,7 +11,7 @@ const Review = () => {
   const saveNewReview = (enteredReview) => {
     const newReviewObj = {
       ...enteredReview,
-      id: Math.floor(Math.random() * 100).toString() 
+      id: Math.floor(Math.random() * 100).toString(),
     };
 
     fetch("http://localhost:4000/review", {
@@ -30,27 +30,26 @@ const Review = () => {
         console.log("Hubo un error");
         setIsError(true);
       })
-      .finally(() =>{
-          setIsLoading(false)
-      })
+      .finally(() => {
+        setIsLoading(false);
+      });
   };
 
-  
   useEffect(() => {
     fetch("http://localhost:4000/review")
-    .then((data) => data.json())
-    .then((data) => {
-      setClients(data);
-      console.log(data)
-      setIsLoading(false);
-    })
-    .catch((e) => {
-      console.log("Hubo un error");
-      setIsError(true);
-      setIsLoading(false);
-    });
+      .then((data) => data.json())
+      .then((data) => {
+        setClients(data);
+        console.log(data);
+        setIsLoading(false);
+      })
+      .catch((e) => {
+        console.log("Hubo un error");
+        setIsError(true);
+        setIsLoading(false);
+      });
   }, []);
-  
+
   return (
     <div className="review-section">
       <h1>
@@ -62,7 +61,7 @@ const Review = () => {
         {isLoading && <div className="loader">Cargando...</div>}
         <ClientItemList clientList={clients} />
       </div>
-      
+
       <div>
         <NewReview onReviewSubmit={saveNewReview} />
       </div>
