@@ -1,5 +1,5 @@
 const Product = require("./products");
-const errorHandler = require("../../helpers/errorHandler");
+const {errorHandler} = require("../../helpers/errorHandler");
 
 const getProductList = async (req, res) => {
   try {

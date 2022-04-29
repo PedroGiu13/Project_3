@@ -1,5 +1,5 @@
 const Menu = require("./menu");
-const errorHandler = require("../../helpers/errorHandler");
+const {errorHandler} = require("../../helpers/errorHandler");
 
 const getMenuList = async (req, res) => {
   try {

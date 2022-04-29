@@ -16,12 +16,15 @@ const reviewRoute = require("./Domain/Reviews/review.routes");
 const menuRoute = require("./Domain/Menu/menu.routes");
 const productRoute = require("./Domain/Products/products.routes");
 const contactRoute = require("./Domain/Contacts/contacs.routes");
+const authRoute = require("./Domain/Auth/auth.routes");
 
 //Middleware que convierte a JSON
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.use(cors());
+
+app.use("/auth", authRoute);
 
 app.use("/review", reviewRoute);
 

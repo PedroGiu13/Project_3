@@ -1,5 +1,5 @@
 const Contacts = require("./contacts");
-const errorHandler = require("../../helpers/errorHandler");
+const {errorHandler} = require("../../helpers/errorHandler");
 
 const addContactList = async (req, res) => {
   try {
