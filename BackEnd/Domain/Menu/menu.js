@@ -21,7 +21,7 @@ Menu.init(
     image: {
       type: DataTypes.STRING,
       allowNull: false,
-    }
+    },
   },
   {
     sequelize,
