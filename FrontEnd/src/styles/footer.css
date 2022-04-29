@@ -30,6 +30,7 @@
 }
 
 .name-span {
+  padding: 0px;
   font-size: .7rem;
   font-weight: bold;
 }
