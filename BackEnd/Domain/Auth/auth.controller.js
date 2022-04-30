@@ -54,4 +54,16 @@ const registerCtrl = async (req, res) => {
   }
 };
 
-module.exports = { registerCtrl, loginCtrl };
+const getUsers = async (req, res) => {
+  try {
+    const usersList = await Users.findAll();
+    res.send({
+      usersList,
+      message: "Lista de usuarios permitida solo para el rol: Admin",
+    });
+  } catch (error) {
+    errorHandler(res, e);
+  }
+};
+
+module.exports = { registerCtrl, loginCtrl, getUsers };

@@ -24,7 +24,7 @@ Users.init(
     },
     role: {
       type: DataTypes.STRING,
-      defaultValue: "User",
+      defaultValue: "user",
     },
   },
   {
@@ -32,7 +32,7 @@ Users.init(
     modelName: "Users",
     createdAt: false,
     updatedAt: false,
-    tableName: "users",
+    tableName: "admin",
   }
 );
 
