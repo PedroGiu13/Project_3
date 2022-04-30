@@ -40,7 +40,6 @@ const Review = () => {
       .then((data) => data.json())
       .then((data) => {
         setClients(data);
-        console.log(data);
         setIsLoading(false);
       })
       .catch((e) => {
