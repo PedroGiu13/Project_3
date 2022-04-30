@@ -1,5 +1,6 @@
 # Project_3
 Proyecto Final para Senpai Academy
+
 Este proyecto busca crear una pagina web para una cafeteria, en donde se puede ver el menu y los productos que se venden, dar opiniones y ponerse en contacto con el cafe.
 
 
