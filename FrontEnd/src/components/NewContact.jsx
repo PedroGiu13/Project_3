@@ -32,6 +32,7 @@ const NewContact = (props) => {
     e.preventDefault();
 
     const contactInfo = {
+      id: Math.floor(Math.random() * 100),
       name: contactName,
       lastName: contactLastName,
       mail: contactMail,
