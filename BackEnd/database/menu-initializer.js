@@ -3,7 +3,6 @@ const Menu = require("../Domain/Menu/menu");
 const menuMigrate = () => {
   menuList.forEach((element) => {
     Menu.create(element);
-    console.log(element.image);
   });
 };
 

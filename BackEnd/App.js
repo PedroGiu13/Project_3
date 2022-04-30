@@ -6,6 +6,7 @@ const sequelize = require("./database/db");
 const reviewExecute = require("./database/review-initializer");
 const menuExecute = require("./database/menu-initializer");
 const productExecute = require("./database/product-initializer");
+const contactExecute = require("./database/contact-initializer");
 const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
@@ -44,5 +45,6 @@ app.listen(4000, async () => {
   reviewExecute();
   menuExecute();
   productExecute();
+  contactExecute();
   console.log("Server running on port 4000");
 });
