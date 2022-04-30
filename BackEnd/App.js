@@ -15,7 +15,7 @@ let app = express();
 const reviewRoute = require("./Domain/Reviews/review.routes");
 const menuRoute = require("./Domain/Menu/menu.routes");
 const productRoute = require("./Domain/Products/products.routes");
-const contactRoute = require("./Domain/Contacts/contacs.routes");
+const contactRoute = require("./Domain/Contacts/contacts.routes");
 const authRoute = require("./Domain/Auth/auth.routes");
 
 //Middleware que convierte a JSON

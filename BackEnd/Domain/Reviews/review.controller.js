@@ -1,11 +1,10 @@
 const Reviews = require("./review");
-const {errorHandler} = require("../../helpers/errorHandler");
+const { errorHandler } = require("../../helpers/errorHandler");
 
 const getReviewList = async (req, res) => {
   try {
     const reviewsList = await Reviews.findAll();
     res.send(reviewsList);
-    
   } catch (e) {
     errorHandler(res, e);
   }
@@ -24,7 +23,6 @@ const addReviewList = async (req, res) => {
     });
 
     res.send(newReview);
-
   } catch (e) {
     errorHandler(res, e);
   }

@@ -14,12 +14,11 @@ const tokenSign = async (user) => {
 };
 
 const verifyToken = async (token) => {
-    try {
-        return jwt.verify(token, process.env.JWT_SECRET)
-        
-    } catch (e) {
-        return null
-    }
-}
+  try {
+    return jwt.verify(token, process.env.JWT_SECRET);
+  } catch (e) {
+    return null;
+  }
+};
 
 module.exports = { tokenSign, verifyToken };

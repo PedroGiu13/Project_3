@@ -1,6 +1,6 @@
 const { encrypt, compare } = require("../../helpers/bcryptHandler");
 const { tokenSign } = require("../../helpers/tokenGenerator");
-const {errorHandler} = require("../../helpers/errorHandler");
+const { errorHandler } = require("../../helpers/errorHandler");
 const Users = require("./auth");
 
 const loginCtrl = async (req, res) => {
@@ -20,7 +20,7 @@ const loginCtrl = async (req, res) => {
     if (checkPassword) {
       res.send({
         data: user,
-        tokenSession
+        tokenSession,
       });
       return;
     }
