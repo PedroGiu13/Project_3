@@ -3,7 +3,7 @@ import "../styles/review.css";
 
 const NewReview = (props) => {
   const [enteredName, setEnteredName] = useState("");
-  const [enteredLastName, setEnteredLastName] = useState('')
+  const [enteredLastName, setEnteredLastName] = useState("");
   const [enteredRating, setEnteredRating] = useState("");
   const [enteredComment, setEnteredComment] = useState("");
 
@@ -12,8 +12,8 @@ const NewReview = (props) => {
   };
 
   const lastNameHandler = (e) => {
-    setEnteredLastName(e.target.value)
-  }
+    setEnteredLastName(e.target.value);
+  };
 
   const ratingChangeHandler = (e) => {
     setEnteredRating(e.target.value);
@@ -36,7 +36,7 @@ const NewReview = (props) => {
     props.onReviewSubmit(newEnteredReview);
 
     setEnteredName("");
-    setEnteredLastName('');
+    setEnteredLastName("");
     setEnteredRating("");
     setEnteredComment("");
   };

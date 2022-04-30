@@ -1,9 +1,9 @@
 import React from "react";
 
 const ProductItem = (props) => {
-  const alertMessage = () =>{
-    alert("Por el momento no se pueden hacer compras")
-  }
+  const alertMessage = () => {
+    alert("Por el momento no se pueden hacer compras");
+  };
 
   return (
     <div className="menu-item">
