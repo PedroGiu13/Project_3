@@ -2,6 +2,7 @@ const { encrypt, compare } = require("../../helpers/bcryptHandler");
 const { tokenSign } = require("../../helpers/tokenGenerator");
 const { errorHandler } = require("../../helpers/errorHandler");
 const Users = require("./auth");
+const Contacts = require("../Contacts/contacts");
 
 const loginCtrl = async (req, res) => {
   try {
@@ -56,10 +57,10 @@ const registerCtrl = async (req, res) => {
 
 const getUsers = async (req, res) => {
   try {
-    const usersList = await Users.findAll();
+    const contactLsit = await Contacts.findAll();
     res.send({
-      usersList,
-      message: "Lista de usuarios permitida solo para el rol: Admin",
+      message: "Lista de clientes permitida solo para el rol: Admin",
+      contactLsit,
     });
   } catch (error) {
     errorHandler(res, e);
