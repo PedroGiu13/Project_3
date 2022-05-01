@@ -1,5 +1,5 @@
 const Reviews = require("./review");
-const { errorHandler } = require("../../helpers/errorHandler");
+const {errorHandler} = require("../../helpers/errorHandler");
 
 const getReviewList = async (req, res) => {
   try {

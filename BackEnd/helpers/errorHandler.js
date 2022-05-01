@@ -1,7 +1,7 @@
-const errorHandler = (res, err) => {
-  console.log(err);
-  res.status(500);
-  res.send({ error: "Ocurrio un error" });
+const errorHandler = (res, error) => {
+  console.log(error);
+  res.status(error.status || 500);
+  res.send({ message: error.message || "Ocurrio un error" });
 };
 
-module.exports = { errorHandler };
+module.exports =  {errorHandler};
