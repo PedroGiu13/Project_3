@@ -8,7 +8,6 @@ const contactsMigrate = () => {
 
 let contactList = [
   {
-    id: "1",
     first_name: "Sergio",
     last_name: "Ramos",
     email: "sr@gmail.com",
@@ -17,7 +16,6 @@ let contactList = [
     phone: 1234546,
   },
   {
-    id: "2",
     first_name: "Luis",
     last_name: "Suarez",
     email: "luisito@gmail.com",

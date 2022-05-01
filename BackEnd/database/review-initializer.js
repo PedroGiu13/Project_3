@@ -8,7 +8,6 @@ const reviewMigrate = () => {
 
 let reviewList = [
   {
-    id: 1,
     first_name: "Jack",
     last_name: "Nicholson",
     calification: "Excelente",
@@ -16,7 +15,6 @@ let reviewList = [
       "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error, laboriosam accusamus! Dignissimos vel rem voluptatibus.",
   },
   {
-    id: 2,
     first_name: "Robert",
     last_name: "de Niro",
     calification: "Muy Bueno",
@@ -24,7 +22,6 @@ let reviewList = [
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem dignissimos libero ea, eius dolore maxime voluptate rerum!",
   },
   {
-    id: 3,
     first_name: "Tom",
     last_name: "Hanks",
     calification: "Excelente",

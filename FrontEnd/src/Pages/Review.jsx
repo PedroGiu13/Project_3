@@ -11,7 +11,6 @@ const Review = () => {
   const saveNewReview = (enteredReview) => {
     const newReviewObj = {
       ...enteredReview,
-      id: Math.floor(Math.random() * 100),
     };
 
     fetch("http://localhost:4000/review", {

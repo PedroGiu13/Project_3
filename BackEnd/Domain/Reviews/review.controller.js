@@ -12,10 +12,9 @@ const getReviewList = async (req, res) => {
 
 const addReviewList = async (req, res) => {
   try {
-    const { id, name, lastName, rating, comment } = req.body;
+    const { name, lastName, rating, comment } = req.body;
 
     const newReview = await Reviews.create({
-      id: id,
       first_name: name,
       last_name: lastName,
       calification: rating,
