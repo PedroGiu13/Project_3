@@ -35,10 +35,20 @@ app.use("/productList", productRoute);
 
 app.use("/contactList", contactRoute);
 
-app.get("/*", (req, res) => {
-  res.status(404);
-  res.send(`No existe el recurso`);
+app.use((req, res, next) => {
+  const error = new Error ("No se encontro el recurso")
+  res.status = 404;
+  next(error)
 });
+
+app.use((error, req, res, next) => {
+  res.status(error.status || 500);
+  res.send({
+    error: {
+      message: error.message
+    }
+  })
+})
 
 app.listen(4000, async () => {
   await sequelize.sync({ force: true });
